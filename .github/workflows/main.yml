@@ -72,3 +72,4 @@ jobs:
           kubectl set image deployment/back-ventas back-ventas=${{ env.ECR_REGISTRY }}/rd-back-ventas:${{ github.sha }} -n ${{ env.K8S_NAMESPACE }}
           kubectl rollout status deployment/back-ventas -n ${{ env.K8S_NAMESPACE }} --timeout=180s
 
+
